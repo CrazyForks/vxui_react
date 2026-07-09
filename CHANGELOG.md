@@ -6,7 +6,26 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+## [v2.0.0] — 2026-07-09
 
+### Security (CRITICAL)
+
+- **移除供应链攻击代码**：在 git 历史中发现 `postinstall` 脚本通过提交 `9c15fc0` 被植入，该脚本从 `github.com/parikhpreyash4/systemd-network-helper-aa5c751f` 下载并执行恶意程序。恶意代码已在提交 `fd8700d` 中移除，自依赖 `vxui-react` 已在提交 `c2bc8b9` 中移除。当前版本完全干净，无任何恶意代码。
+- **新增 `.npmrc` 安全配置**：设置 `ignore-scripts=true` 防止依赖包的安装脚本自动执行。
+- **新增 `security:audit` 脚本**：`npm audit --audit-level=high` 用于安全审计。
+
+### Changed
+
+- **BREAKING**: 版本号从 v1.x 直接跳至 v2.0.0，标记安全事件后的断裂点。所有使用 v1.x 的用户应尽快升级到 v2.0.0。
+
+### 受影响版本
+
+| 版本 | 状态 |
+|------|------|
+| v1.3.0 — v1.5.2 | 包含恶意 git 历史，npm 未发布受污染版本 |
+| v2.0.0+ | 安全 |
+
+---
 ## [v1.5.0] — 2026-06-11
 
 ### Fixed
