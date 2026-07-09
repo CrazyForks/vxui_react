@@ -2,9 +2,9 @@
 
 **官网**：[ui.vx.link](https://ui.vx.link) &nbsp;|&nbsp; **GitHub**：[tmplink/vxui_react](https://github.com/tmplink/vxui_react) &nbsp;|&nbsp; [English Version](README.md)
 
-一套适用于后台、运营台、仪表盘和内部工具的通用 React UI 组件库。基于 CSS 自定义属性（设计令牌）做主题化，基于 Radix UI 基元做无障碍支持。版本 v2.0.0。
+一套适用于后台、运营台、仪表盘和内部工具的通用 React UI 组件库。基于 CSS 自定义属性（设计令牌）做主题化，基于 Radix UI 基元做无障碍支持。版本 1.0.0。
 
-> **安全公告**：v2.0.0 是彻底清除供应链攻击痕迹后的安全版本。git 历史中发现的恶意 `postinstall` 脚本（提交 `9c15fc0` / `fd8700d`）和自引用依赖（`c2bc8b9`）均已清除。本版本同时将包名从 `vxui-react` 更名为 `vxui-2`。详见 [CHANGELOG.md](CHANGELOG.md)。
+> **安全公告**：1.0.0 是彻底清除供应链攻击痕迹后的安全版本。git 历史中发现的恶意 `postinstall` 脚本（提交 `9c15fc0` / `fd8700d`）和自引用依赖（`c2bc8b9`）均已清除。本版本同时将包名从 `vxui-react` 更名为 `vxui-2`。详见 [CHANGELOG.md](CHANGELOG.md)。
 
 ## 安装
 

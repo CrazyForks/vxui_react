@@ -2,9 +2,9 @@
 
 **Website**: [ui.vx.link](https://ui.vx.link) &nbsp;|&nbsp; **GitHub**: [tmplink/vxui_react](https://github.com/tmplink/vxui_react) &nbsp;|&nbsp; [中文文档](README.zh.md)
 
-A general-purpose React UI component library for admin panels, ops dashboards, internal tools, and data-heavy interfaces. Built on CSS custom properties (design tokens) for theming and Radix UI primitives for accessibility. v2.0.0.
+A general-purpose React UI component library for admin panels, ops dashboards, internal tools, and data-heavy interfaces. Built on CSS custom properties (design tokens) for theming and Radix UI primitives for accessibility. v1.0.0.
 
-> **Security Notice**: v2.0.0 is a clean-slate release following the removal of a supply-chain attack vector discovered in the git history. The malicious `postinstall` script (commits `9c15fc0` / `fd8700d`) and self-referencing dependency (`c2bc8b9`) have been neutralized. This version also renames the package from `vxui-react` to `vxui-2`. See [CHANGELOG.md](CHANGELOG.md) for details.
+> **Security Notice**: 1.0.0 is a clean-slate release following the removal of a supply-chain attack vector discovered in the git history. The malicious `postinstall` script (commits `9c15fc0` / `fd8700d`) and self-referencing dependency (`c2bc8b9`) have been neutralized. This version also renames the package from `vxui-react` to `vxui-2`. See [CHANGELOG.md](CHANGELOG.md) for details.
 
 ## Installation
 

@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
-## [v2.0.0] — 2026-07-09
+## [1.0.0] — 2026-07-09
 
 ### Security (CRITICAL)
 
@@ -17,14 +17,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - **BREAKING**: 包名从 `vxui-react` 更名为 `vxui-2`。安装命令变为 `npm install vxui-2`，导入路径变为 `from 'vxui-2'`。
-- **BREAKING**: 版本号从 v1.x 直接跳至 v2.0.0，标记安全事件后的断裂点。所有使用 v1.x 的用户应尽快升级到 v2.0.0。
+- **BREAKING**: vxui-2 采用全新版本号体系，从 1.0.0 开始。
 
 ### 受影响版本
 
 | 版本 | 状态 |
 |------|------|
-| v1.3.0 — v1.5.2 | 包含恶意 git 历史，npm 未发布受污染版本 |
-| v2.0.0+ | 安全 |
+| vxui-react v1.3.0 — v1.5.2 | 包含恶意 git 历史，npm 未发布受污染版本 |
+| vxui-2 1.0.0+ | 安全 |
 
 ---
 ## [v1.5.0] — 2026-06-11
