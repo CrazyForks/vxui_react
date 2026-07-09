@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- **BREAKING**: 包名从 `vxui-react` 更名为 `vxui-2`。安装命令变为 `npm install vxui-2`，导入路径变为 `from 'vxui-2'`。
 - **BREAKING**: 版本号从 v1.x 直接跳至 v2.0.0，标记安全事件后的断裂点。所有使用 v1.x 的用户应尽快升级到 v2.0.0。
 
 ### 受影响版本

@@ -1,21 +1,23 @@
-# VXUI React
+# VXUI 2
 
-> A pure-CSS, zero-dependency React UI library for building admin dashboards and operator interfaces. v1.5.2.
+> A pure-CSS, React UI component library for building admin dashboards and operator interfaces. v2.0.0.
 
 > ℹ️ This file (`llms.txt`) is included in the npm package. AI tools can read it directly to obtain component documentation and usage guides.
 
-VXUI React provides layout shells, navigation, form controls, data display, overlays, and mobile components. It relies solely on CSS custom properties (design tokens) for theming — no Tailwind, no CSS-in-JS. Radix UI primitives are used for accessibility-critical components (dialogs, menus, tooltips, etc.).
+VXUI 2 provides layout shells, navigation, form controls, data display, overlays, and mobile components. It relies solely on CSS custom properties (design tokens) for theming — no Tailwind, no CSS-in-JS. Radix UI primitives are used for accessibility-critical components (dialogs, menus, tooltips, etc.).
+
+> **Security**: v2.0.0 is a clean release after removing a supply-chain attack vector discovered in git history. The package name was changed from `vxui-react` to `vxui-2`.
 
 ## Installation
 
 ```bash
-npm install vxui-react
+npm install vxui-2
 ```
 
 Import the base stylesheet once at your app entry:
 
 ```tsx
-import 'vxui-react/styles';
+import 'vxui-2/styles';
 ```
 
 ## Core Layout: AppShell
@@ -23,7 +25,7 @@ import 'vxui-react/styles';
 `AppShell` is the top-level layout component. It composes a collapsible sidebar, sticky topbar, and scrollable content area.
 
 ```tsx
-import { AppShell } from 'vxui-react';
+import { AppShell } from 'vxui-2';
 
 <AppShell
   brand="My App"
@@ -98,7 +100,7 @@ interface AppShellNavItem {
 `Shell` is the underlying layout primitive used by AppShell. Use it for fully custom layouts.
 
 ```tsx
-import { Shell, ShellSidebar, ShellContent } from 'vxui-react';
+import { Shell, ShellSidebar, ShellContent } from 'vxui-2';
 
 <Shell sidebarWidth={300} density="compact">
   <ShellSidebar>{/* nav content */}</ShellSidebar>
@@ -122,8 +124,8 @@ import { Shell, ShellSidebar, ShellContent } from 'vxui-react';
 Modal dialog component built on Radix UI. Supports size presets, placement options, and fullscreen mode for mobile devices.
 
 ```tsx
-import { Dialog, DialogClose } from 'vxui-react';
-import { Button } from 'vxui-react';
+import { Dialog, DialogClose } from 'vxui-2';
+import { Button } from 'vxui-2';
 
 <Dialog
   trigger={<Button>Open Dialog</Button>}
@@ -246,7 +248,7 @@ import { Button } from 'vxui-react';
 - **Separator** — Horizontal or vertical rule
 - **Heading / Text / Label** — Typography primitives
 
-### Mobile-specific (vxui-react/mobile)
+### Mobile-specific (vxui-2/mobile)
 - **MobileApp** — Root mobile layout
 - **MobileShell** — Mobile screen wrapper
 - **MobileDrawer** — Bottom-sheet style drawer
@@ -304,7 +306,7 @@ Dark mode tokens are applied automatically when `<html>` has `class="dark"` or `
 Display key-value pairs in a structured table layout. Supports horizontal (label left, value right) and vertical (label top, value bottom) modes.
 
 ```tsx
-import { Descriptions } from 'vxui-react';
+import { Descriptions } from 'vxui-2';
 
 <Descriptions
   title="User Info"
@@ -337,7 +339,7 @@ import { Descriptions } from 'vxui-react';
 Lazy-loading image component with placeholder, error fallback, radius presets, and optional click-to-preview lightbox.
 
 ```tsx
-import { Image } from 'vxui-react';
+import { Image } from 'vxui-2';
 
 <Image
   src="/photo.jpg"
@@ -372,7 +374,7 @@ import { Image } from 'vxui-react';
 Global notification system using provider/hook pattern. Notifications stack in a fixed position with auto-dismiss and manual dismiss support.
 
 ```tsx
-import { NotificationProvider, useNotification } from 'vxui-react';
+import { NotificationProvider, useNotification } from 'vxui-2';
 
 function App() {
   return (
@@ -425,7 +427,7 @@ interface NotificationInput {
 PIN / OTP code input with auto-advance, paste support, numeric/alphanumeric modes, and optional mask.
 
 ```tsx
-import { PinInput } from 'vxui-react';
+import { PinInput } from 'vxui-2';
 
 <PinInput
   length={6}
@@ -461,8 +463,8 @@ import { PinInput } from 'vxui-react';
 Status result page component for success, error, warning, and other outcomes. Includes default icons per status.
 
 ```tsx
-import { Result } from 'vxui-react';
-import { Button } from 'vxui-react';
+import { Result } from 'vxui-2';
+import { Button } from 'vxui-2';
 
 <Result
   status="success"
@@ -488,7 +490,7 @@ import { Button } from 'vxui-react';
 Searchable multi-select dropdown with tag display, clearable selection, and a "+N more" badge when tags overflow.
 
 ```tsx
-import { MultiSelect } from 'vxui-react';
+import { MultiSelect } from 'vxui-2';
 
 <MultiSelect
   options={[
@@ -525,7 +527,7 @@ import { MultiSelect } from 'vxui-react';
 Time selection component with hours and minutes columns, optional seconds, and a dropdown overlay.
 
 ```tsx
-import { TimePicker } from 'vxui-react';
+import { TimePicker } from 'vxui-2';
 
 <TimePicker
   label="Meeting Time"
@@ -553,7 +555,7 @@ import { TimePicker } from 'vxui-react';
 Theme context provider that manages light/dark mode switching, custom CSS token overrides, and persists the selection to localStorage.
 
 ```tsx
-import { ThemeProvider, useTheme, createTheme } from 'vxui-react';
+import { ThemeProvider, useTheme, createTheme } from 'vxui-2';
 
 const themes = {
   light: createTheme('light', { label: 'Light' }),
@@ -584,7 +586,7 @@ function MyApp() {
 |------|------|---------|-------------|
 | children | ReactNode | **required** | App content |
 | defaultTheme | string | 'light' | Default theme name |
-| storageKey | string | 'vxui-react-theme' | localStorage key for persistence |
+| storageKey | string | 'vxui-2-theme' | localStorage key for persistence |
 | themes | ThemeRegistry | { light, dark } | Registry of named themes |
 
 ### useTheme() API
@@ -600,7 +602,7 @@ function MyApp() {
 Conditionally render different nodes based on the current viewport breakpoint (desktop ≥1024px, tablet 768–1023px, mobile ≤767px).
 
 ```tsx
-import { Responsive } from 'vxui-react';
+import { Responsive } from 'vxui-2';
 
 <Responsive
   desktop={<DesktopLayout />}
@@ -622,7 +624,7 @@ import { Responsive } from 'vxui-react';
 Structured article layout component for documentation and long-form content. Includes sub-components for header, title, body, sections, props table, pager navigation, stats grid, and empty states.
 
 ```tsx
-import { Article, ArticleHeader, ArticleTitle, ArticleBody, Section, SectionHeading } from 'vxui-react';
+import { Article, ArticleHeader, ArticleTitle, ArticleBody, Section, SectionHeading } from 'vxui-2';
 
 <Article>
   <ArticleHeader>
